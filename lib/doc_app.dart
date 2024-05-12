@@ -20,7 +20,7 @@ class DocApp extends StatelessWidget {
         title: 'Doc App',
         theme: ThemeData(
           primaryColor: ColorsManger.primaryColor,
-          scaffoldBackgroundColor: ColorsManger.WhiteColor
+          scaffoldBackgroundColor: ColorsManger.WhiteColor,
         ),
 
         home: OnBoardingScreen(),
