@@ -29,10 +29,13 @@ dependencies:
   json_serializable: ^6.8.0
   json_annotation: ^4.9.0
   # Localization
-  intl: ^0.18.1
-  easy_localization: ^3.0.6
+  intl: ^0.18.0
+  easy_localization: ^3.0.7
   # Splash Screen
   flutter_native_splash: ^2.4.0
+  flutter_svg: ^2.0.10+1
+  font_awesome_flutter:
+  flutter_screenutil: ^5.9.0
 
 
 dev_dependencies:
