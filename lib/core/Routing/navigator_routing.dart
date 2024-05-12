@@ -4,19 +4,22 @@ import '../../features/on_boarding/on_boarding_screen.dart';
 import 'package:flutter/material.dart';
 
 class RouteUtils {
+
+
+
   static GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
   static BuildContext context = navigatorKey.currentState!.context;
 
-  static Route _getRoute(Widget view) {
+  static Route _getRoute(Widget view,RouteSettings settings) {
     return MaterialPageRoute(builder: (context) => view);
   }
-
-  static Future<dynamic> push(Widget view) {
-    return Navigator.of(context).push(_getRoute(view));
+  final  arguments = RouteSettings().arguments;
+      static Future<dynamic> push(Widget view, RouteSettings routeSettings) {
+    return Navigator.of(context).push(_getRoute(view,RouteSettings()));
   }
 
   static Future<dynamic> pushReplacement(Widget view) {
-    return Navigator.of(context).pushReplacement(_getRoute(view));
+    return Navigator.of(context).pushReplacement(_getRoute(view,RouteSettings()));
   }
 
   static void pop(Widget view) {
@@ -25,7 +28,7 @@ class RouteUtils {
 
   static Future<dynamic> pushAndRemoveUntil(Widget view) {
     return Navigator.of(context)
-        .pushAndRemoveUntil(_getRoute(view), (route) => false);
+        .pushAndRemoveUntil(_getRoute(view,RouteSettings()), (route) => false);
   }
 }
 
