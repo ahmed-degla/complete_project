@@ -1,3 +1,6 @@
+import 'package:complete_project/features/login/ui/login_screen.dart';
+
+import '../../features/on_boarding/on_boarding_screen.dart';
 import 'package:flutter/material.dart';
 
 class RouteUtils {
@@ -24,4 +27,9 @@ class RouteUtils {
     return Navigator.of(context)
         .pushAndRemoveUntil(_getRoute(view), (route) => false);
   }
+}
+
+class Routes{
+  static const Widget onBoarding = OnBoardingScreen();
+  static const Widget logIn = LogInScreen();
 }
