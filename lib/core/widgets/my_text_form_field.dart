@@ -48,12 +48,12 @@ class MyTextFormField extends StatelessWidget {
 
 
 
-        hintStyle: hintTextStyle ?? TextStyles.font14LighterGreyWeight500,
+        hintStyle: hintTextStyle ?? TextStyles.font14LightGreyWeight500,
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular( 16),
           borderSide: BorderSide(
             width: 1,
-            color: enabledBorderColor ?? ColorsManger.lighterGrey,
+            color: enabledBorderColor ?? ColorsManger.lightGrey,
           ),
         ),
         focusedBorder: OutlineInputBorder(
